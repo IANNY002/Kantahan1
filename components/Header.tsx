@@ -10,7 +10,7 @@ import { useSupabaseClient } from "@supabase/auth-helpers-react"
 import { useUser } from "@/hooks/useUser";
 import {FaUserAlt} from "react-icons/fa"
 import { toast } from "react-hot-toast";
-
+import {FcAbout} from "react-icons/fc";
 
 interface HeaderProps {
     children: React.ReactNode;  
@@ -73,7 +73,7 @@ const handleLogout = async () => {
                 <RxCaretRight className="text-white" size={35}/>
              </button>
             </div>
-            <div className="flex md:hidden gap-x-2 items-center">
+            <div className="flex md:hidden gap-x-3 items-center">
                 <button
                 className="rounded-full
                 p-2
@@ -84,6 +84,17 @@ const handleLogout = async () => {
                 hover:opacity-75
                 transition">
                     <HiHome className="text-black" size={20}/>
+                </button>
+                <button
+                className="rounded-full
+                p-2
+                bg-white
+                flex
+                items-center
+                justify-center
+                hover:opacity-75
+                transition">
+                    <FcAbout className="text-black" size={20}/>
                 </button>
                 <button
                 className="rounded-full
